@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Contained Buttons -->
+    <item name="button_primary_foreground" type="color">#FFFFFF</item>
+    <item name="button_primary_background" type="color">#2288FF</item>
+    <item name="button_primary_border" type="color">@android:color/transparent</item>
+    <item name="button_primary_foreground_pressed" type="color">#BBBBBB</item>
+    <item name="button_primary_background_pressed" type="color">#2244FF</item>
+    <item name="button_primary_border_pressed" type="color">@android:color/transparent</item>
+    <item name="button_primary_foreground_disabled" type="color">#88FFFFFF</item>
+    <item name="button_primary_background_disabled" type="color">#882288FF</item>
+    <item name="button_primary_border_disabled" type="color">@android:color/transparent</item>
+    <item name="button_primary_ripple" type="color">#2244FF</item>
+
+</resources>
