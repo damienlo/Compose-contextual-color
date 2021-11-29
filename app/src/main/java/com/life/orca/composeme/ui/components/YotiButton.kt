@@ -64,7 +64,7 @@ fun YotiButton(
             modifier = modifier.fillMaxWidth()
     ) {
         Text(
-                text = text.toUpperCase(Locale.getDefault()),
+                text = text.uppercase(),
                 fontWeight = FontWeight.Bold,
                 style = MaterialTheme.typography.button,
                 color = when {
