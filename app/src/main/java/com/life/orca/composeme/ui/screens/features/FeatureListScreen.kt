@@ -14,7 +14,8 @@ import com.life.orca.composeme.ui.theme.ComposeMeTheme
 @Composable
 fun FeatureListScreen(
         showYotiButtonSample: () -> Unit,
-        showNavigationParam: (String) -> Unit
+        showNavigationParam: (String) -> Unit,
+        showHiltViewModel: () -> Unit
 ) {
     Column(
             modifier = Modifier
@@ -24,6 +25,7 @@ fun FeatureListScreen(
     ) {
         ComposeButton(text = "Show yoti button", onClick = showYotiButtonSample)
         ComposeButton(text = "Show navigation param", onClick = { showNavigationParam("42") })
+        ComposeButton(text = "Show hilt viewModel", onClick = showHiltViewModel)
     }
 }
 
@@ -34,6 +36,7 @@ fun FeatureListScreenLightPreview() {
         FeatureListScreen(
                 showYotiButtonSample = { /* nothing to do here */ },
                 showNavigationParam = { /* nothing to do here */ },
+                showHiltViewModel = { /* nothing to do here */ }
         )
     }
 }
@@ -45,6 +48,7 @@ fun FeatureListScreenDarkPreview() {
         FeatureListScreen(
                 showYotiButtonSample = { /* nothing to do here */ },
                 showNavigationParam = { /* nothing to do here */ },
+                showHiltViewModel = { /* nothing to do here */ }
         )
     }
 }

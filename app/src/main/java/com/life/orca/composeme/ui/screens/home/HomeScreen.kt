@@ -3,6 +3,7 @@ package com.life.orca.composeme.ui.screens.home
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
@@ -12,6 +13,8 @@ import androidx.navigation.navArgument
 import com.life.orca.composeme.ui.screens.features.FeatureListScreen
 import com.life.orca.composeme.ui.screens.navigationparam.NavigationParamScreen
 import com.life.orca.composeme.ui.screens.sample.YotiButtonSampleScreen
+import com.life.orca.composeme.ui.screens.viewmodelhilt.SampleHiltViewModel
+import com.life.orca.composeme.ui.screens.viewmodelhilt.SampleViewModelHiltScreen
 import com.life.orca.composeme.ui.theme.ComposeMeTheme
 
 private object Routes {
@@ -19,6 +22,7 @@ private object Routes {
     const val FeatureList = "feature_list"
     const val YotiButtonSample = "yoti_button_sample"
     const val NavigationParam = "navigation_param"
+    const val SampleViewModel = "sample_viewmodel_hilt"
 }
 
 private class Actions(navController: NavHostController) {
@@ -28,6 +32,9 @@ private class Actions(navController: NavHostController) {
     }
     val showNavigationParam: (String) -> Unit = { itemId ->
         navController.navigate(Routes.NavigationParam + "/$itemId")
+    }
+    val showSampleHiltViewModel: () -> Unit = {
+        navController.navigate(Routes.SampleViewModel)
     }
 }
 
@@ -40,7 +47,8 @@ fun HomeScreen(startDestination: String = Routes.FeatureList) {
         composable(Routes.FeatureList) {
             FeatureListScreen(
                     showYotiButtonSample = actions.showYotiButtonSample,
-                    showNavigationParam = actions.showNavigationParam
+                    showNavigationParam = actions.showNavigationParam,
+                    showHiltViewModel = actions.showSampleHiltViewModel
             )
         }
         composable(Routes.YotiButtonSample) {
@@ -52,6 +60,10 @@ fun HomeScreen(startDestination: String = Routes.FeatureList) {
         ) { backStackEntry ->
             val itemId = backStackEntry.arguments!!.getString("itemId")!!
             NavigationParamScreen(itemId = itemId)
+        }
+        composable(Routes.SampleViewModel) {
+            val viewModel = hiltViewModel<SampleHiltViewModel>()
+            SampleViewModelHiltScreen(viewModel = viewModel)
         }
     }
 }

@@ -3,4 +3,8 @@
 
     <string name="navigation_param_title">Navigation Param</string>
     <string name="navigation_param_content">Received parameter is: [%1$s]</string>
+
+    <string name="sample_hilt_view_model_content">Content successfully loaded: [%1$s]</string>
+    <string name="sample_hilt_view_model_error">Something went wrong</string>
+    <string name="sample_hilt_view_model_error_retry_button">Retry</string>
 </resources>

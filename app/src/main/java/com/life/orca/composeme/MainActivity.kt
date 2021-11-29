@@ -9,7 +9,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import com.life.orca.composeme.ui.screens.home.HomeScreen
 import com.life.orca.composeme.ui.theme.ComposeMeTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,7 +29,9 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Content() {
-    HomeScreen()
+    Surface(color = MaterialTheme.colors.background) {
+        HomeScreen()
+    }
 }
 
 @Preview(showBackground = true)
