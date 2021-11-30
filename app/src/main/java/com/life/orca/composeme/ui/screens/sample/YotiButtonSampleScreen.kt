@@ -22,17 +22,29 @@ fun YotiButtonSampleScreen() {
             verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         Text(
-                text = "Enabled",
+                text = "Primary Enabled",
                 style = MaterialTheme.typography.subtitle1,
                 color = MaterialTheme.colors.onBackground
         )
-        YotiButton(text = "Compose button", onClick = { /* nothing to do here */ })
+        YotiButton.Primary(text = "Compose button", onClick = { /* nothing to do here */ })
         Text(
-                text = "Disabled",
+                text = "Primary Disabled",
                 style = MaterialTheme.typography.subtitle1,
                 color = MaterialTheme.colors.onBackground
         )
-        YotiButton(text = "Compose button", enabled = false, onClick = { /* nothing to do here */ })
+        YotiButton.Primary(text = "Compose button", enabled = false, onClick = { /* nothing to do here */ })
+        Text(
+                text = "Secondary Enabled",
+                style = MaterialTheme.typography.subtitle1,
+                color = MaterialTheme.colors.onBackground
+        )
+        YotiButton.Secondary(text = "Compose button", onClick = { /* nothing to do here */ })
+        Text(
+                text = "Secondary Disabled",
+                style = MaterialTheme.typography.subtitle1,
+                color = MaterialTheme.colors.onBackground
+        )
+        YotiButton.Secondary(text = "Compose button", enabled = false, onClick = { /* nothing to do here */ })
     }
 }
 

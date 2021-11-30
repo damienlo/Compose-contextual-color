@@ -63,6 +63,37 @@ val Colors.buttonPrimaryRipple: Color
     @Composable
     get() = colorResource(id = R.color.button_primary_ripple)
 
+val Colors.buttonSecondaryForeground: Color
+    @Composable
+    get() = colorResource(id = R.color.button_secondary_foreground)
+val Colors.buttonSecondaryBackground: Color
+    @Composable
+    get() = colorResource(id = R.color.button_secondary_background)
+val Colors.buttonSecondaryBorder: Color
+    @Composable
+    get() = colorResource(id = R.color.button_secondary_border)
+val Colors.buttonSecondaryBorderPressed: Color
+    @Composable
+    get() = colorResource(id = R.color.button_secondary_border_pressed)
+val Colors.buttonSecondaryForegroundPressed: Color
+    @Composable
+    get() = colorResource(id = R.color.button_secondary_foreground_pressed)
+val Colors.buttonSecondaryBackgroundPressed: Color
+    @Composable
+    get() = colorResource(id = R.color.button_secondary_background_pressed)
+val Colors.buttonSecondaryForegroundDisabled: Color
+    @Composable
+    get() = colorResource(id = R.color.button_secondary_foreground_disabled)
+val Colors.buttonSecondaryBackgroundDisabled: Color
+    @Composable
+    get() = colorResource(id = R.color.button_secondary_background_disabled)
+val Colors.buttonSecondaryBorderDisabled: Color
+    @Composable
+    get() = colorResource(id = R.color.button_secondary_border_disabled)
+val Colors.buttonSecondaryRipple: Color
+    @Composable
+    get() = colorResource(id = R.color.button_secondary_ripple)
+
 @Composable
 fun ComposeMeTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable() () -> Unit) {
     val colors = if (darkTheme) {

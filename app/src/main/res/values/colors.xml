@@ -12,4 +12,15 @@
     <item name="button_primary_border_disabled" type="color">@android:color/transparent</item>
     <item name="button_primary_ripple" type="color">#2244FF</item>
 
+    <item name="button_secondary_foreground" type="color">#2288FF</item>
+    <item name="button_secondary_background" type="color">#FFFFFF</item>
+    <item name="button_secondary_border" type="color">#2288FF</item>
+    <item name="button_secondary_foreground_pressed" type="color">#2244FF</item>
+    <item name="button_secondary_background_pressed" type="color">#BBBBBB</item>
+    <item name="button_secondary_border_pressed" type="color">#2244FF</item>
+    <item name="button_secondary_foreground_disabled" type="color">#882288FF</item>
+    <item name="button_secondary_background_disabled" type="color">#88FFFFFF</item>
+    <item name="button_secondary_border_disabled" type="color">#882288FF</item>
+    <item name="button_secondary_ripple" type="color">#2288FF</item>
+
 </resources>
