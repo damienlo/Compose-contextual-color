@@ -1,5 +1,7 @@
 package com.life.orca.composeme.ui.screens.home
 
+import android.content.Context
+import android.content.Intent
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.tooling.preview.Preview
@@ -10,6 +12,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.life.orca.composeme.OldSchoolActivity
 import com.life.orca.composeme.ui.screens.features.FeatureListScreen
 import com.life.orca.composeme.ui.screens.navigationparam.NavigationParamScreen
 import com.life.orca.composeme.ui.screens.sample.YotiButtonSampleScreen
@@ -36,6 +39,9 @@ private class Actions(navController: NavHostController) {
     val showSampleHiltViewModel: () -> Unit = {
         navController.navigate(Routes.SampleViewModel)
     }
+    val showOldSchoolActivity: (Context) -> Unit = { ctx ->
+        ctx.startActivity(Intent(ctx, OldSchoolActivity::class.java))
+    }
 }
 
 @Composable
@@ -48,7 +54,8 @@ fun HomeScreen(startDestination: String = Routes.FeatureList) {
             FeatureListScreen(
                     showYotiButtonSample = actions.showYotiButtonSample,
                     showNavigationParam = actions.showNavigationParam,
-                    showHiltViewModel = actions.showSampleHiltViewModel
+                    showHiltViewModel = actions.showSampleHiltViewModel,
+                    showOldActivity = actions.showOldSchoolActivity
             )
         }
         composable(Routes.YotiButtonSample) {

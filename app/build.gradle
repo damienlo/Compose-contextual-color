@@ -62,6 +62,9 @@ dependencies {
     implementation "androidx.activity:activity-compose:$activityComposeVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-compose:$viewmodelComposeVersion"
 
+    //AppCompat
+    implementation "androidx.appcompat:appcompat:$appcompatVersion"
+
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
